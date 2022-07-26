@@ -1,0 +1,136 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  padding: 14px;
+}
+
+body {
+  background: #262729;
+  ;
+  /* fallback for old browsers */
+
+}
+
+/* header section  */
+.header-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 0px;
+}
+
+.header-container .name {
+  color: #ffffff;
+  font-family: "Trocchi", serif;
+  font-size: 55px;
+  font-weight: bolder;
+  -webkit-text-stroke: 0.8px rgb(158, 177, 50);
+}
+
+.header-container .other-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.header-container .other-field a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 8px;
+  text-align: center;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.header-container .other-field a:hover {
+  color: #262729;
+  background-color: white;
+  transition: all 1s ease-in-out;
+}
+
+/* notes container work  */
+.note-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px;
+}
+
+.notes-cont {
+  height: 280px;
+  width: 223px;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  margin: 14px;
+}
+
+.title {
+  color: orange;
+  padding: 0px;
+
+}
+
+.date {
+  padding: 0px;
+  color: rgb(170, 170, 170);
+}
+
+.content {
+  padding: 0px;
+  font-size: 22px;
+  font-family: 'Roboto', sans-serif;
+  margin: 18px;
+  margin-top: 30px;
+
+
+}
+
+
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px;
+
+}
+
+.buttons a {
+  /* text-decoration: none; */
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 6px;
+  height: 15px;
+}
+
+.buttons a:hover {
+
+  background-color: white;
+  color: black;
+  transition: all 1s ease-in-out;
+}
+
+@media screen and (max-width: 400px) {
+  .header-container .other-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  * {
+    padding: 0px;
+    margin: 0px;
+    padding: 7px;
+  }
+
+  .content {
+    font-size: 19px;
+
+
+
+  }
+}

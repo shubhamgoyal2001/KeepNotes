@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title><%=title%></title>
+    <link rel="stylesheet" href="/css/profile.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="header-container">
+      <div class="name"><%=user.name%></div>
+
+      <div class="other-field">
+        <a href="/posts/addnote">Addnote</a>
+
+        <a href="/user/profile/todo">To-do</a>
+        <a href="/user/profile/link/?name=<%=user.name%>">Linktree</a>
+        <a href="/user/profile/Book">Books</a>
+        <a href="/user/profile/movie">Movie</a>
+        <a href="/user/signout">Sign Out</a>
+      </div>
+    </div>
+    <div class="note-container">
+      <%post_list.reverse()%>
+      <% for(let i of post_list){%>
+
+      <div class="notes-cont">
+        <div class="title"><%=i.Title%></div>
+        <div class="date">
+          <% var date =i.createdAt.toDateString(); %> <%=date%>
+        </div>
+        <div class="content">
+          <% var date =JSON.stringify(i.content) %> <%=date.slice(1,55)%>
+        </div>
+        <div class="buttons">
+          <a href="/posts/read/?id=<%=i._id%>">Read</a>
+          <a href="/posts/delete/?id=<%=i._id%>" <i
+            class="fa-solid fa-trash-can"></i></a>
+            
+        </div>
+      
+      </div>
+      <% } %>
+    </div>
+  </body>
+
+
+</html>
