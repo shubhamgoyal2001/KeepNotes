@@ -41,6 +41,6 @@ app.listen(process.env.PORT, function (error) {
     if (error) {
         console.log("error in listen");
     }
-    console.log("Server is running successfully");
+    console.log("Server is running Successfully");
 })
 
