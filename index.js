@@ -37,10 +37,10 @@ app.use(passport.session());
 app.use(passport.setAuthenticatedUser);
 app.use('/', require('./routes'));
 
-app.listen(port, function (error) {
+app.listen(process.env.PORT, function (error) {
     if (error) {
         console.log("error in listen");
     }
-    console.log("Server is running one port", port);
+    console.log("Server is running");
 })
 
